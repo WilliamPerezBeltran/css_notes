@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>my website</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-	</head>
-	<body>
-		<style>
-			.box{
-				text-align: center;
-				background-color: yellow;
-				border:5px solid black;
-				color: white;
-			}
-			.blue-box{
-				background-color: blue;
-				padding: 10px;
-				margin:30px 10px 10px 30px;
-			}
-		</style>
-		<div class="box">
-			<h5 class="box blue-box">padding</h5>
-		</div>
-	</body>
+<head>
+	<title>my website</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<style>
+		:root{
+			--border-variable:100px solid blue;
+		}
+		.box{
+			/*over-write varible*/
+			--border-variable:125px solid yellow;
+			border: var(--border-variable)
+		}
+	</style>
+	<div class="box">
+		<section>
+			When you create your variables in :root they will set the value of that variable for the whole page.
+		</section>
+		<section>
+			You can then over-write these variables by setting them again within a specific element.
+		</section>
+	</div>
+</body>
 </html>
