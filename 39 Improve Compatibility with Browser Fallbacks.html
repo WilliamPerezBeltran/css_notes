@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>my website</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-	</head>
-	<body>
-		<style>
-			.box{
-				text-align: center;
-				background-color: yellow;
-				border:5px solid black;
-				color: white;
-			}
-			.blue-box{
-				background-color: blue;
-				padding: 10px;
-				margin:30px 10px 10px 30px;
-			}
-		</style>
-		<div class="box">
-			<h5 class="box blue-box">padding</h5>
-		</div>
-	</body>
+<head>
+	<title>my website</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<style>
+		:root {
+			--red-color: red;
+		}
+		.red-box {
+
+			background: red;
+			background: var(--red-color,red);
+			height: 200px;
+			width:200px;
+		}
+	</style>
+	<div class="red-box"></div>
+
+</body>
 </html>
