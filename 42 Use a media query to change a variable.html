@@ -6,20 +6,25 @@
 	</head>
 	<body>
 		<style>
-			.box{
-				text-align: center;
-				background-color: yellow;
-				border:5px solid black;
-				color: white;
+			:root{
+				--box-size:400px;
+				--color-box:blue;
 			}
-			.blue-box{
-				background-color: blue;
-				padding: 10px;
-				margin:30px 10px 10px 30px;
+			.box{
+				width: var(--box-size,10px);
+				height: var(--box-size,10px);
+				background-color: var(--color-box, yellow);
+			}
+
+			@media(max-width: 350px){
+				:root{
+					--box-size:100px;
+
+				};
+
 			}
 		</style>
 		<div class="box">
-			<h5 class="box blue-box">padding</h5>
 		</div>
 	</body>
 </html>
