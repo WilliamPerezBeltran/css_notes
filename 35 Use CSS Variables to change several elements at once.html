@@ -6,20 +6,28 @@
 	</head>
 	<body>
 		<style>
-			.box{
-				text-align: center;
-				background-color: yellow;
-				border:5px solid black;
-				color: white;
-			}
-			.blue-box{
-				background-color: blue;
-				padding: 10px;
-				margin:30px 10px 10px 30px;
-			}
-		</style>
-		<div class="box">
-			<h5 class="box blue-box">padding</h5>
-		</div>
+  .big-box{
+	--box-green:green;
+  	border:2px solid black;
+  	width: 500px;
+  	height: 500px;
+  }
+  .small-box{
+  	border:2px solid red;
+  	width: 100px;
+  	height: 100px;
+  }
+  .variable-color{
+  	background: var(--box-green, pink);
+  }
+  body {
+    background:#c6faf1;
+  }
+
+</style>
+<div class="big-box">
+    <div class="small-box variable-color"></div>
+</div>
+
 	</body>
 </html>
